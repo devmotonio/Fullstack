@@ -5,6 +5,7 @@ Endpoints da API
 Ler todos os produtos
 
 GET http://localhost/api/products
+
 ```
 {
     "current_page": 1,
@@ -39,15 +40,31 @@ GET http://localhost/api/products
 }
 ```
 
-Ler um prduto pelo id
+Ler um produto pelo id
+
 GET http://localhost/api/products/1
+
+```
+{
+    "id": 1,
+    "name": "TV LED",
+    "description": "TV 55'' 4K",
+    "tension": "110",
+    "brand": "Samsung",
+    "image": "http://localhost/storage/images/products/lLOLyTe8a9THEIJc.jpg",
+    "created_at": "2022-10-31T23:26:34.000000Z",
+    "updated_at": "2022-10-31T23:38:33.000000Z"
+}
+```
 
 Fazer upload da foto do produto
 POST http://localhost/api/imageupload
 Request
+
   Body: form-data
 
 Response
+
 ```
 {
     "url": "http://localhost/storage/images/products/12FB1v9qs2GvEsSF.jpg"
@@ -57,8 +74,9 @@ Response
 Criar um produto
 POST http://localhost/api/products
 Request
+
   Body: form-data
-  
+
 ```
 {
     "name": "TV LED",
@@ -71,8 +89,11 @@ Request
     "id": 1
 }
 ```
+
 PUT http://localhost/api/products/1
+
 Request
+
   Body: x-www-form-urlencoded
 
 ```
@@ -87,4 +108,5 @@ Request
     "updated_at": "2022-10-31T23:38:33.000000Z"
 }
 ```
-http://localhost/api/products/21
+
+DELETE http://localhost/api/products/1
