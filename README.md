@@ -56,7 +56,9 @@ Response
 
 Criar um produto
 POST http://localhost/api/products
-
+Request
+  Body: form-data
+  
 ```
 {
     "name": "TV LED",
@@ -69,5 +71,20 @@ POST http://localhost/api/products
     "id": 1
 }
 ```
-http://localhost/api/products/11
+PUT http://localhost/api/products/1
+Request
+  Body: x-www-form-urlencoded
+
+```
+{
+    "id": 1,
+    "name": "TV LED",
+    "description": "TV 55'' 4K",
+    "tension": "110",
+    "brand": "Samsung",
+    "image": "http://localhost/storage/images/products/lLOLyTe8a9THEIJc.jpg",
+    "created_at": "2022-10-31T23:26:34.000000Z",
+    "updated_at": "2022-10-31T23:38:33.000000Z"
+}
+```
 http://localhost/api/products/21
