@@ -145,7 +145,7 @@ no diretório raiz do projeto
 
     docker-compose up -d
     
-    docker exec -d backend php artisan migrate --force
+    docker exec backend php artisan migrate --force
     
-    docker exec -d backend php artisan storage:link
+    docker exec backend php artisan storage:link
     
