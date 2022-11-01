@@ -19,7 +19,7 @@ class CreateProductsTable extends Migration
             $table->tinyText('description');
             $table->char('tension',4);
             $table->string('brand',15);
-            $table->string('image',50);
+            $table->string('image',100);
             $table->timestamps();
         });
     }
