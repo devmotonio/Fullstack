@@ -139,10 +139,13 @@ Response
 DELETE http://localhost/api/products/1
 
 
-# Instalaçao
+# Instalação
 
 no diretório raiz do projeto
+
     docker-compose up -d
+    
     docker exec -d backend php artisan migrate
+    
     docker exec -d backend php artisan storage:link
     
