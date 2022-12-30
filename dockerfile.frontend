@@ -1,5 +1,7 @@
 FROM node:lts-alpine
 WORKDIR /app
-COPY ./frontend/ ./
+ENV CHOKIDAR_USEPOLLING=true
+RUN npm install -g @vue/cli
+COPY ./frontend/ .
 RUN npm install
-CMD ["npm", "run", "serve"]
+CMD ["npm","run", "serve"]
